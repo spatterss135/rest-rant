@@ -7,4 +7,8 @@ app.get('/', (req, res)=> {
     res.send('hello world')
 })
 
+app.get('*', (req, res)=> {
+    res.send('Error 404')
+})
+
 app.listen(port)
