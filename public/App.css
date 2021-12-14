@@ -1,0 +1,48 @@
+.grid-container {
+    color: tomato;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.new-place-title {
+    color: rgb(10,110,253);
+}
+
+nav {
+    background-color: cornflowerblue;
+    border-bottom: 15px solid #7A66ED;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    color: pink;
+    text-decoration: none;
+}
+
+/* .new-form {
+    margin-top: 50px;
+    padding: 25px 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+} */
+
+
+

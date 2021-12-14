@@ -1,16 +1,14 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('./layouts/Default')
 
-function error404 () {
-	return (
-	  <Def>
-	      <main>
-		  <h1>404: PAGE NOT FOUND</h1>
-		  <p>Oops, sorry, we can't find this page!</p>
-		  <img src="/images/kittykat.jpeg" alt="cute cat pic" />
-	      </main>
-	  </Def>
-	)
-      }
+function Error404 () {
+    return (
+        <Def>
+        <h1>Error 404</h1>
+        <img src="/images/404.jpg" alt="" />
+    </Def>
+    )
 
-module.exports = error404
+}
+
+module.exports = Error404
