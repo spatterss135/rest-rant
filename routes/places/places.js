@@ -13,19 +13,12 @@ router.get('/', (req, res)=> {
     
 
 router.post('/', async (req, res) => {
-    fs.access(req.body.pic, fs.R_OK, (err) => {
-        console.log('Inside fs')
-        if (err) { 
-            console.log('Inside err') 
-        }
-        else {
-            console.log('Inside no error')
-        }
-    });
-    
-    console.log('get this to run last')
-    // placesObjects.create(req.body)
-    // res.redirect('/')
+    if (req.body.pic === ''){
+        req.body.pic = undefined
+    }
+    console.log(req.body)
+    placesObjects.create(req.body)
+    res.redirect('/places')
 })
 
 router.get('/new', (req, res) => {

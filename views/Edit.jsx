@@ -80,8 +80,8 @@ function Edit({place, index}) {
                 </div>
 				</div>
                 <div className="mb-3">
-                    <label htmlFor="cuisine" className='form-label'>Cuisine</label>
-                    <input type="text" name="cuisine" id='cuisine' className='form-control'defaultValue={place.cuisines}/>
+                    <label htmlFor="cuisines" className='form-label'>Cuisine</label>
+                    <input type="text" name="cuisines" id='cuisines' className='form-control'defaultValue={place.cuisines}/>
                 </div>
                 
                 <button type="submit" className="btn btn-primary">Add</button>
