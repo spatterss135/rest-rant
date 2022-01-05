@@ -3,7 +3,7 @@ const mongoose =  require('mongoose')
 const app = express()
 require('dotenv').config()
 const port = process.env.PORT
-const placesRouter = require('./routes/places/places.js')
+const placesRouter = require('./controllers/places/placesController.js')
 const methodOverride = require('method-override')
 // MIDDLEWARE
 app.use(methodOverride('_method'))
@@ -24,5 +24,7 @@ app.get('*', (req, res)=> {
     res.render('Error404')
 })
 
+
+let commentSeed = require('./seeders/commentsSeed')
 
 app.listen(port)

@@ -1,12 +1,14 @@
 const express = require('express')
 const router = express.Router()
-const placesObjects = require('../../data/placesObjects')
-const fs = require('fs').promises
-const util = require('util');
+const placesObjects = require('../../models/places')
+
+
+
 
 
 router.get('/', (req, res)=> {
     placesObjects.find().then(placesObjects => {
+        // console.log(placesObjects)
         res.render('Places', {placesObjects: placesObjects})
     })
     })
@@ -35,6 +37,7 @@ router.get('/edit/:id', (req, res) => {
 router.get('/:id', (req, res)=> {
     placesObjects.findById(req.params.id)
     .then(place => {
+        console.log(place)
         res.render('specificPlace', {place: place, index: req.params.id})
     })
     

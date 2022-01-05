@@ -6,10 +6,11 @@ const restarauntSchema = new Schema({
   city: {type: String, required: true},
   state: {type: String, required: true},
   cuisines: String,
-  pic: {type: String, default: "/images/fiya.jpg"}
+  pic: {type: String, default: "/images/fiya.jpg"},
+  comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}]
   
 })
 
-const Restraunts = mongoose.model('raunts', restarauntSchema)
+const Restraunts = mongoose.model('Raunt', restarauntSchema)
 
 module.exports = Restraunts
