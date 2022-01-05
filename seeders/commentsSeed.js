@@ -12,10 +12,10 @@ async function seed() {
     console.log(place.comments)
     // Create a fake sample comment.
     let comment = await Comment.create({
-        author: 'Mi Amigo',
+        author: 'Bob',
         rant: false,
-        stars: 5.0,
-        content: 'Wow, simply amazing! Highly recommended!'
+        stars: 3.0,
+        content: 'This was food!'
     })
 
     // // Add that comment to the place's comment array.

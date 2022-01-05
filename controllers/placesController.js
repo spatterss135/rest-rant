@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const placesObjects = require('../../models/places')
+const placesObjects = require('../models/places')
+const Comments = require('../models/comments')
 
 
 
@@ -34,8 +35,9 @@ router.get('/edit/:id', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res)=> {
+router.get('/:id', async (req, res)=> {
     placesObjects.findById(req.params.id)
+    .populate('comments')
     .then(place => {
         console.log(place)
         res.render('specificPlace', {place: place, index: req.params.id})
